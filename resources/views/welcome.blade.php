@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Edgecut</title>
+  <title>Library</title>
 
 
   <!-- bootstrap core css -->
@@ -39,7 +39,7 @@
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
           <span>
-            Edgecut
+            Library
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="furniture.html">Furnitures</a>
+                <a class="nav-link" href="furniture.html">Books</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="blog.html">Blog</a>
@@ -93,8 +93,8 @@
                 <div class="col-md-5">
                   <div class="detail-box">
                     <h1>
-                      For All Your <br>
-                      Furniture Needs
+                      Books from around the world <br>
+                      New or Used
                     </h1>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -111,7 +111,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="images/slider-img1.png" alt="">
                   </div>
                 </div>
               </div>
@@ -123,8 +123,8 @@
                 <div class="col-md-5">
                   <div class="detail-box">
                     <h1>
-                      For All Your <br>
-                      Furniture Needs
+                      Romance? Horror? <br>
+                      Everything is here
                     </h1>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -141,7 +141,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="images/slider-img2.png" alt="">
                   </div>
                 </div>
               </div>
@@ -153,8 +153,8 @@
                 <div class="col-md-5">
                   <div class="detail-box">
                     <h1>
-                      For All Your <br>
-                      Furniture Needs
+                      Can be borrowed <br>
+                      Can be purchased
                     </h1>
                     <p>
                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img.png" alt="">
+                    <img src="images/slider-img3.png" alt="">
                   </div>
                 </div>
               </div>
@@ -194,28 +194,31 @@
     <div class="container">
       <div class="heading_container">
         <h2>
-          Our Furniture
+          Best Books
         </h2>
         <p>
-          which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
+          Buku-buku yang paling sering dipinjam/yang paling laris dibeli dalam seminggu terakhir.
         </p>
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f1.png" alt="">
+              <img src="images/bo1.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                brown Chair Design
+                Laskar Pelangi
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 100.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -224,18 +227,21 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f2.png" alt="">
+              <img src="images/bo2.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Double Bed Design
+                Sang Pemimpin
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 200.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -244,18 +250,21 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f3.png" alt="">
+              <img src="images/bo3.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                House Chair Design
+                Enderson
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 200.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -264,18 +273,21 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f4.png" alt="">
+              <img src="images/bo4.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                brown Table Design
+                Maryamah Karpov
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 100.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -284,18 +296,21 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f5.png" alt="">
+              <img src="images/bo5.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Blue Chair Design
+                Si Juki Komik Strip
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 200.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -304,18 +319,21 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/f6.png" alt="">
+              <img src="images/bo6.png" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Brown Table Design
+                Si Juki Lika-Liku Anak Kos
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>$</span> 200.00
+                  <span>RP.</span> 100.000
                 </h6>
                 <a href="">
                   Buy Now
+                </a>
+                <a href="">
+                  Borrow now
                 </a>
               </div>
             </div>
@@ -372,14 +390,14 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/b1.jpg" alt="">
+              <img src="images/b1.jpeg" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Look even slightly believable. If you are
+                Kadokawa collaborates with Gramedia
               </h5>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Sebagai tanda dari awal perjalanan dan kesuksesannya, PT. Phoenix Gramedia Indonesia dengan bangga mempersembahkan 5 produk pertamanya.
               </p>
               <a href="">
                 Read More
@@ -394,10 +412,10 @@
             </div>
             <div class="detail-box">
               <h5>
-                Anything embarrassing hidden in the middle
+                Rilisan Buku Baru!! Alya Sometimes Hides Her Feeling in Russian 2
               </h5>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Bagian kedua dari komedi romantis antara pemuda otaku dan gadis cantik keturunan Rusia kembali dimulai. Alya dan Masachika melakukan pertemuan rahasia di halaman sekolah di saat senja. Meskipun mereka berdebat panas, tapi mereka tetap berjanji untuk membentuk duo dalam pemilihan ketua OSIS selanjutnya. Lawan mereka nanti adalah Yuki Suou—kandidat utama ketua OSIS yang memiliki karisma luar biasa.
               </p>
               <a href="">
                 Read More
@@ -412,10 +430,10 @@
             </div>
             <div class="detail-box">
               <h5>
-                Molestias magni natus dolores odio commodi. Quaerat!
+                meet the author: Pierdomenico Baccalario.
               </h5>
               <p>
-                alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                Pierdomenico Baccalario (lahir 6 Maret 1974) adalah seorang penulis fiksi anak-anak dan dewasa muda asal Italia, yang terkenal dengan serial Ulysses Moore yang terjual lebih dari 10 juta eksemplar di seluruh dunia.
               </p>
               <a href="">
                 Read More
@@ -475,7 +493,7 @@
                     <div class="name">
                       <i class="fa fa-quote-left" aria-hidden="true"></i>
                       <h6>
-                        Siaalya
+                        Duo the Owl
                       </h6>
                     </div>
                     <p>
@@ -499,7 +517,7 @@
                     <div class="name">
                       <i class="fa fa-quote-left" aria-hidden="true"></i>
                       <h6>
-                        Siaalya
+                        Duo the Owl
                       </h6>
                     </div>
                     <p>
@@ -621,22 +639,22 @@
               </h5>
               <div class="post_box">
                 <div class="img-box">
-                  <img src="images/f1.png" alt="">
+                  <img src="images/bo1.png" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f2.png" alt="">
+                  <img src="images/bo2.png" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f3.png" alt="">
+                  <img src="images/bo3.png" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f4.png" alt="">
+                  <img src="images/bo4.png" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f5.png" alt="">
+                  <img src="images/bo5.png" alt="">
                 </div>
                 <div class="img-box">
-                  <img src="images/f6.png" alt="">
+                  <img src="images/bo6.png" alt="">
                 </div>
               </div>
             </div>
