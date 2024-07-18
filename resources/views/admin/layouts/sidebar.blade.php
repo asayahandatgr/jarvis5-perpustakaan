@@ -35,10 +35,42 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="{{ url('admin/jabatan') }}" class="nav-link">
+            <a href="{{ url('admin/genre') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Genre
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/buku') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Buku
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/petugas') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Petugas
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/peminjaman') }}" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
               <p>
                 Peminjaman
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ url('admin/pengembalian') }}" class="nav-link">
+              <i class="nav-icon fas fa-user-plus"></i>
+              <p>
+                Pengembalian
               </p>
             </a>
           </li>
