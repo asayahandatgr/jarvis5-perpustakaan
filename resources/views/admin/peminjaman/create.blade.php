@@ -21,7 +21,7 @@
           <div class="col-12 mt-3">
             <div class="card">
               <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Tambah Data</h3>
+                <h3 class="card-title">Tambah Peminjam</h3>
                 <a href="{{ route('peminjaman.index') }}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->
@@ -72,7 +72,7 @@
                     </select>
                   </div>
                   <div class="form-group row">
-                    <label for="status_peminjam" class="col-md-4">Gender</label>
+                    <label for="status_peminjam" class="col-md-4">Status Peminjam</label>
                     <select name="status_peminjam" class="form-control col-md-8" required>
                       <option value="Berhasil">Berhasil</option>
                       <option value="Pending">Pending</option>

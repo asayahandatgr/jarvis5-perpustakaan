@@ -40,7 +40,7 @@
                       <th>Genre</th>
                       <th>Buku</th>
                       <th>Petugas</th>
-                      <th>Status</th>
+                      <th>Status Peminjam</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>

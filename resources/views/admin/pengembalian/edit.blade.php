@@ -21,7 +21,7 @@
           <div class="col-12 mt-3">
             <div class="card">
               <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Edit Data</h3>
+                <h3 class="card-title">Edit Pengembalian</h3>
                 <a href="{{route('pengembalian.index')}}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->
@@ -29,7 +29,7 @@
                 <form action="{{ route('pengembalian.store') }}" method="post">
                   @csrf
                   <div class="form-group row">
-                    <label for="peminjaman_id" class="col-md-4">Peminjaman</label>
+                    <label for="peminjaman_id" class="col-md-4">Nama Peminjam</label>
                     <input type="hidden" name="id" value="{{ $pengembalian->id }}">
                     <select name="peminjaman_id" id="peminjaman_id" class="form-control col-md-8" required>
                       @foreach($peminjaman as $minjam)

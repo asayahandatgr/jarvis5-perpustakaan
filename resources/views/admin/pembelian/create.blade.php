@@ -21,66 +21,57 @@
           <div class="col-12 mt-3">
             <div class="card">
               <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Edit Peminjam</h3>
-                <a href="{{route('peminjaman.index')}}" class="btn btn-success btn-sm">Kembali</a>
+                <h3 class="card-title">Tambah Pembelian</h3>
+                <a href="{{ route('pembelian.index') }}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form action="{{ route('peminjaman.store') }}" method="post">
+                <form action="{{ route('pembelian.store') }}" method="post">
                   @csrf
                   <div class="form-group row">
-                    <label for="nama_peminjam" class="col-md-4">Nama Peminjam</label>
-                    <input type="hidden" name="id" value="{{ $peminjaman->id }}">
-                    <input type="text" value="{{ $peminjaman->nama_peminjam }}" name="nama_peminjam" id="nama_peminjam" class="form-control col-md-8" required>
+                    <label for="tanggal" class="col-md-4">Tanggal</label>
+                    <input type="date" name="tanggal" id="tanggal" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">
-                    <label for="mulai" class="col-md-4">Mulai</label>
-                    <input type="date" value="{{ $peminjaman->mulai }}" name="mulai" id="mulai" class="form-control col-md-8" required>
+                    <label for="nama_pembeli" class="col-md-4">Nama Pembeli</label>
+                    <input type="text" name="nama_pembeli" id="nama_pembeli" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">
-                    <label for="selesai" class="col-md-4">Selesai</label>
-                    <input type="date" value="{{ $peminjaman->selesai }}" name="selesai" id="selesai" class="form-control col-md-8" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="ktm" class="col-md-4">Ktm</label>
-                    <input type="text" value="{{ $peminjaman->ktm }}" name="ktm" id="ktm" class="form-control col-md-8" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="genre_id" class="col-md-4">Genre</label>
-                    <select name="genre_id" id="genre_id" class="form-control col-md-8">
-                      @foreach ($genre as $gen)
-                      <option value="{{ $gen->id }}" {{ $peminjaman->genre_id == $gen->id ? 'selected' : '' }}>{{ $gen->nama }}</option>
-                      @endforeach
-                    </select>
+                    <label for="telefon" class="col-md-4">No Telfon</label>
+                    <input type="number" name="telefon" id="telefon" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">
                     <label for="buku_id" class="col-md-4">Buku</label>
                     <select name="buku_id" id="buku_id" class="form-control col-md-8">
                       <option value="" hidden>Pilih Buku</option>
                       @foreach ($buku as $buk)
-                      <option value="{{ $buk->id }}" {{ $peminjaman->buku_id == $buk->id ? 'selected' : '' }}>{{ $buk->title }}</option>
+                      <option value="{{ $buk->id}}">{{ $buk->title }}</option>
                       @endforeach
                     </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="harga" class="col-md-4">Harga</label>
+                    <input type="number" name="harga" id="harga" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">
                     <label for="petugas_id" class="col-md-4">Petugas</label>
                     <select name="petugas_id" id="petugas_id" class="form-control col-md-8">
                       <option value="" hidden>Pilih Petugas</option>
                       @foreach ($petugas as $tugas)
-                      <option value="{{ $tugas->id }}" {{ $peminjaman->petugas_id == $tugas->id ? 'selected' : '' }}>{{ $tugas->nama }}</option>
+                      <option value="{{ $tugas->id}}">{{ $tugas->nama }}</option>
                       @endforeach
                     </select>
                   </div>
                   <div class="form-group row">
-                    <label for="status_peminjam" class="col-md-4">Status Peminjam</label>
-                    <select name="status_peminjam" class="form-control col-md-8" required>
-                      <option value="Berhasil" {{ $peminjaman->status_peminjam == 'Berhasil' ? 'selected' : '' }}>Berhasil</option>
-                      <option value="Pending" {{ $peminjaman->status_peminjam == 'Pending' ? 'selected' : '' }}>Pending</option>
-                      <option value="Gagal" {{ $peminjaman->status_peminjam == 'Gagal' ? 'selected' : '' }}>Gagal</option>
+                    <label for="status_pembelian" class="col-md-4">Status Pembelian</label>
+                    <select name="status_pembelian" class="form-control col-md-8" required>
+                    <option value="" hidden>Pilih Status</option>
+                      <option value="Berhasil">Berhasil</option>
+                      <option value="Gagal">Gagal</option>
                     </select>
                   </div>
-                  <div class="d-flex justify-content">
-                    <input type="submit" value="Edit" class="btn btn-primary">
+                  <div class="d-flex justify-content-center">
+                    <input type="submit" value="Tambah" class="btn btn-primary">
                   </div>
                 </form>
               </div>
@@ -96,6 +87,7 @@
     </section>
   </div>
 </div>
+
 @push('script')
 <script src="{{asset ('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset ('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>

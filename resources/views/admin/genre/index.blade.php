@@ -21,7 +21,7 @@
               <div class="col-12">
                 <div class="card mt-3">
                   <div class="card-header text-center">
-                    <h3 class="card-title">Genre Buku</h3>
+                    <h3 class="card-title">Daftar Genre</h3>
                   </div>
                   <div class="card-header">
 

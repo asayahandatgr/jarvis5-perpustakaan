@@ -16,4 +16,7 @@ class Petugas extends Model
     public function pengembalian(){
         return $this->hasMany(Pengembalian::class);
     }
+    public function pembelian(){
+        return $this->hasMany(Pembelian::class);
+    }
 }

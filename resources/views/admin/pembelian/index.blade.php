@@ -18,49 +18,54 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12 mt-3">
-            <div class="card">
-              <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Edit Petugas</h3>
-                <a href="{{route('petugas.index')}}" class="btn btn-success btn-sm">Kembali</a>
+          <div class="col-12">
+            <div class="card mt-3">
+              <div class="card-header text-center">
+                <h3 class="card-title">Daftar Pembelian</h3>
+              </div>
+              <div class="card-header">
+
+                <a href="{{route('pembelian.create')}}" class="btn btn-primary">Create</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <form action="{{route('petugas.store')}}" method="post">
-                  @csrf
-                  <div class="form-group row">
-                    <label for="nama" class="col-md-4">Nama</label>
-                    <input type="hidden" name="id" value="{{($petugas->id)}}">
-                    <input type="text" value="{{($petugas->nama)}}" name="nama" id="nama" class="form-control col-md-8" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="gender" class="col-md-4">Gender</label>
-                    <select name="gender" class="form-control col-md-8" required>
-                      <option value="Laki-laki" {{ $petugas->gender == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
-                      <option value="Perempuan" {{ $petugas->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
-                    </select>
-                  </div>
-                  <div class="form-group row">
-                    <label for="jam_mulai" class="col-md-4">Jam Mulai</label>
-                    <input type="time" value="{{ $petugas->jam_mulai }}" name="jam_mulai" id="jam_mulai" class="form-control col-md-8" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="jam_selesai" class="col-md-4">Jam Selesai</label>
-                    <input type="time" value="{{ $petugas->jam_selesai }}" name="jam_selesai" id="jam_selesai" class="form-control col-md-8" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="telepon" class="col-md-4">Telepon</label>
-                    <input type="number" name="telepon" class="form-control col-md-8" value="{{ $petugas->telepon }}" required>
-                  </div>
-                  <div class="form-group row">
-                    <label for="alamat" class="col-md-4">Alamat</label>
-                    <input type="text" name="alamat" class="form-control col-md-8" value="{{ $petugas->alamat }}" required>
-                  </div>
-                  <div class="d-flex justify-content">
-                    <input type="submit" value="Tambah" class="btn btn-primary">
-                  </div>
-                </form>
-
+                <table id="example1" class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Tanggal</th>
+                      <th>Nama</th>
+                      <th>No Telfon</th>
+                      <th>Buku</th>
+                      <th>Harga</th>
+                      <th>Petugas</th>
+                      <th>Status Pembelian</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    @foreach ($pembelian as $beli)
+                    <tr>
+                      <td>{{ $loop->iteration }}</td>
+                      <td>{{ $beli->tanggal }}</td>
+                      <td>{{ $beli->nama_pembeli }}</td>
+                      <td>{{ $beli->telefon }}</td>
+                      <td>{{ $beli->buku->title }}</td>
+                      <td>{{ $beli->harga }}</td>
+                      <td>{{ $beli->petugas->nama }}</td>
+                      <td>{{ $beli->status_pembelian }}</td>
+                      <td class="d-flex">
+                        <a href="{{route('pembelian.edit', $beli->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                        <form method="POST" action="{{route('pembelian.delete', $beli->id)}}">
+                          @csrf
+                          @method('delete')
+                          <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
+                        </form>
+                      </td>
+                    </tr>
+                    @endforeach
+                  </tbody>
+                </table>
               </div>
               <!-- /.card-body -->
             </div>
@@ -71,7 +76,6 @@
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
-          
     </section>
   </div>
 </div>

@@ -22,7 +22,7 @@
                 <form action="{{ route('pengembalian.store') }}" method="post">
                   @csrf
                   <div class="form-group row">
-                    <label for="peminjaman_id" class="col-md-4">Peminjaman</label>
+                    <label for="peminjaman_id" class="col-md-4">Nama Peminjam</label>
                     <select name="peminjaman_id" id="peminjaman_id" class="form-control col-md-8" required>
                       <option value="" hidden>Pilih Peminjam</option>
                       @foreach($peminjaman as $minjam)

@@ -13,7 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Library</title>
+  <title>Library Jarvis</title>
 
 
   <!-- bootstrap core css -->
@@ -29,6 +29,32 @@
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
+  <style>
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown .dropdown-content.show {
+      display: block;
+    }
+  </style>
+
 </head>
 
 <body>
@@ -38,9 +64,7 @@
     <header class="header_section long_section px-0">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
-          <span>
-            Library
-          </span>
+          <span>Library<span style="color: #f89646;">Jarvis</span></span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class=""> </span>
@@ -52,17 +76,22 @@
               <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
+              <li class="nav-item dropdown">
+                <a href="#services" class="dropbtn nav-link dropdown-toggle">Services</a>
+                <div class="dropdown-content">
+                  <a class="nav-link" href="#purchase">Purchase Books</a>
+                  <a class="nav-link" href="#borrow">Borrow Books</a>
+                  <a class="nav-link" href="#return">Return Books</a>
+                </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="furniture.html">Books</a>
+                <a class="nav-link" href="#about"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
+                <a class="nav-link" href="#buku">Books</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link" href="#blog">Blog</a>
               </li>
             </ul>
           </div>
@@ -73,11 +102,13 @@
               </span>
               <i class="fa fa-user" aria-hidden="true"></i>
             </a>
-            <form class="form-inline">
-              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
+            <a href="">
+              <span>
+                Register
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+
           </div>
         </div>
       </nav>
@@ -93,11 +124,10 @@
                 <div class="col-md-5">
                   <div class="detail-box">
                     <h1>
-                      Books from around the world <br>
-                      New or Used
+                      Books from around the world
                     </h1>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    <p class="text-justify">
+                      a window into the diversity of global literature. From fascinating stories to deep thoughts, enjoy a journey through inspiring cultures and countries.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -111,7 +141,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img1.png" alt="">
+                    <img src="images/per4.png" alt="">
                   </div>
                 </div>
               </div>
@@ -126,8 +156,8 @@
                       Romance? Horror? <br>
                       Everything is here
                     </h1>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    <p class="text-justify">
+                      a place where you can find all kinds of stories you want. From heartwarming love stories to suspenseful horror tales, satisfying reading experience for all tastes.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -141,7 +171,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img2.png" alt="">
+                    <img src="images/per2.png" alt="">
                   </div>
                 </div>
               </div>
@@ -156,8 +186,8 @@
                       Can be borrowed <br>
                       Can be purchased
                     </h1>
-                    <p>
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
+                    <p class="text-justify">
+                      our flexible library services. You can borrow or buy books from our extensive collection, according to your needs. Enjoy easy access and diverse choices for every reader.
                     </p>
                     <div class="btn-box">
                       <a href="" class="btn1">
@@ -171,7 +201,7 @@
                 </div>
                 <div class="col-md-7">
                   <div class="img-box">
-                    <img src="images/slider-img3.png" alt="">
+                    <img src="images/per3.png" alt="">
                   </div>
                 </div>
               </div>
@@ -190,7 +220,7 @@
 
   <!-- furniture section -->
 
-  <section class="furniture_section layout_padding">
+  <section class="furniture_section layout_padding" id="buku">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -273,11 +303,11 @@
         <div class="col-md-6 col-lg-4">
           <div class="box">
             <div class="img-box">
-              <img src="images/bo4.png" alt="">
+              <img src="images/op1.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Maryamah Karpov
+                One Piece
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
@@ -348,7 +378,7 @@
 
   <!-- about section -->
 
-  <section class="about_section layout_padding long_section">
+  <section class="about_section layout_padding long_section" id="about">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -363,8 +393,8 @@
                 About Us
               </h2>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
+            <p class="text-justify">
+              Selamat datang di Perpustakaan Jarvis, sumber utama Anda untuk beragam koleksi buku. Didirikan pada tahun 2024, kami berkomitmen untuk mempromosikan literasi dan menyediakan akses mudah ke berbagai bahan bacaan. Pilihan kami meliputi buku-buku baru dan bekas, yang melayani semua jenis pembaca. Bergabunglah bersama kami dalam merayakan kegembiraan membaca dan menjelajahi dunia melalui buku.
             </p>
             <a href="">
               Read More
@@ -379,7 +409,7 @@
 
   <!-- blog section -->
 
-  <section class="blog_section layout_padding">
+  <section class="blog_section layout_padding" id="blog">
     <div class="container">
       <div class="heading_container">
         <h2>
@@ -394,10 +424,10 @@
             </div>
             <div class="detail-box">
               <h5>
-                Kadokawa collaborates with Gramedia
+                Kadokawa Collaborates with Gramedia
               </h5>
-              <p>
-                Sebagai tanda dari awal perjalanan dan kesuksesannya, PT. Phoenix Gramedia Indonesia dengan bangga mempersembahkan 5 produk pertamanya.
+              <p class="text-justify">
+                PT. Phoenix Gramedia Indonesia dengan bangga mengumumkan kolaborasinya dengan Kadokawa, sebuah langkah signifikan yang menandai awal perjalanan dan kesuksesan bersama. PT. Phoenix Gramedia Indonesia mempersembahkan lima produk pertamanya sebagai wujud dedikasi dan inovasi mereka. Kolaborasi ini diharapkan akan membawa angin segar dan memperkaya dunia literasi serta hiburan di Indonesia.
               </p>
               <a href="">
                 Read More
@@ -408,13 +438,13 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/b2.jpg" alt="">
+              <img src="images/b2co.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                Rilisan Buku Baru!! Alya Sometimes Hides Her Feeling in Russian 2
+                Rilisan Buku Baru!! Alya Sometimes Hides Her Feeling
               </h5>
-              <p>
+              <p class="text-justify">
                 Bagian kedua dari komedi romantis antara pemuda otaku dan gadis cantik keturunan Rusia kembali dimulai. Alya dan Masachika melakukan pertemuan rahasia di halaman sekolah di saat senja. Meskipun mereka berdebat panas, tapi mereka tetap berjanji untuk membentuk duo dalam pemilihan ketua OSIS selanjutnya. Lawan mereka nanti adalah Yuki Suou—kandidat utama ketua OSIS yang memiliki karisma luar biasa.
               </p>
               <a href="">
@@ -426,14 +456,14 @@
         <div class="col-md-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="images/b3.jpg" alt="">
+              <img src="images/b3co.jpg" alt="">
             </div>
             <div class="detail-box">
               <h5>
-                meet the author: Pierdomenico Baccalario.
+                Collaborates with Jarvis Academy
               </h5>
-              <p>
-                Pierdomenico Baccalario (lahir 6 Maret 1974) adalah seorang penulis fiksi anak-anak dan dewasa muda asal Italia, yang terkenal dengan serial Ulysses Moore yang terjual lebih dari 10 juta eksemplar di seluruh dunia.
+              <p class="text-justify">
+                Kolaborasi Library kami dengan perusahaan Jarvis telah resmi dimulai. Library dan Jarvis bekerja sama untuk menciptakan pengalaman membaca yang lebih interaktif dan canggih. Para pengunjung Library dapat menikmati akses mudah ke koleksi buku digital yang luas. Kerjasama ini bertujuan untuk meningkatkan minat baca dan literasi di kalangan semua umur. Library kami siap membawa perubahan positif dalam dunia literasi.
               </p>
               <a href="">
                 Read More
@@ -714,7 +744,42 @@
   <script src="js/custom.js"></script>
   <!-- Google Map -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <!-- Popper.js, diperlukan untuk dropdown Bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- End Google Map -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          e.preventDefault();
+          let dropdownContent = this.nextElementSibling;
+          if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+          } else {
+            // Tutup dropdown yang lain
+            document.querySelectorAll('.dropdown-content').forEach(function(content) {
+              content.classList.remove('show');
+            });
+            dropdownContent.classList.add('show');
+          }
+        });
+      });
+
+      // Tutup dropdown saat mengklik di luar dropdown
+      document.addEventListener('click', function(e) {
+        if (!e.target.matches('.dropdown-toggle')) {
+          document.querySelectorAll('.dropdown-content').forEach(function(content) {
+            content.classList.remove('show');
+          });
+        }
+      });
+    });
+  </script>
+
 
 </body>
 

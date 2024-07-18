@@ -41,3 +41,10 @@ Route::get('admin/pengembalian/create', [ADMIN\PengembalianController::class, 'c
 Route::get('admin/pengembalian/edit/{id}', [ADMIN\PengembalianController::class, 'edit'])->name('pengembalian.edit');
 Route::post('admin/pengembalian/store', [ADMIN\PengembalianController::class, 'store'])->name('pengembalian.store');
 Route::delete('admin/pengembalian/delete/{id}', [ADMIN\PengembalianController::class, 'delete'])->name('pengembalian.delete');
+
+// Pembelian
+Route::get('admin/pembelian', [ADMIN\PembelianController::class, 'index'])->name('pembelian.index');
+Route::get('admin/pembelian/create', [ADMIN\PembelianController::class, 'create'])->name('pembelian.create');
+Route::get('admin/pembelian/edit/{id}', [ADMIN\PembelianController::class, 'edit'])->name('pembelian.edit');
+Route::post('admin/pembelian/store', [ADMIN\PembelianController::class, 'store'])->name('pembelian.store');
+Route::delete('admin/pembelian/delete/{id}', [ADMIN\PembelianController::class, 'delete'])->name('pembelian.delete');

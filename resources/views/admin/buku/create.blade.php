@@ -21,7 +21,7 @@
           <div class="col-12 mt-3">
             <div class="card">
               <div class="card-header d-flex justify-content-between">
-                <h3 class="card-title">Tambah Data</h3>
+                <h3 class="card-title">Tambah Buku</h3>
                 <a href="{{route('buku.index')}}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->

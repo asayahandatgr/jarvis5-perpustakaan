@@ -18,6 +18,9 @@ class Buku extends Model
     public function peminjaman(){
         return $this->hasMany(Peminjaman::class);
     }
+    public function pembelian(){
+        return $this->hasMany(Pembelian::class);
+    }
     public function pengembalian(){
         return $this->hasMany(Pengembalian::class);
     }
