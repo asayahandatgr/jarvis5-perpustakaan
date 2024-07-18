@@ -25,7 +25,7 @@
                   </div>
                   <div class="card-header">
 
-                    <a href="" class="btn btn-primary">Create</a>
+                    <a href="{{route('pengembalian.create')}}" class="btn btn-primary">Create</a>
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
@@ -51,8 +51,8 @@
                               <td>{{ $balik->buku->title }}</td>
                               <td>{{ $balik->petugas->nama }}</td>
                               <td class="d-flex">
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                <form method="POST" action="">
+                                <a href="{{route('pengembalian.edit', $balik->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                                <form method="POST" action="{{route('pengembalian.delete', $balik->id)}}">
                                   @csrf
                                   @method('delete')
                                   <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>

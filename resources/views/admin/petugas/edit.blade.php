@@ -18,56 +18,49 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card mt-3">
-              <div class="card-header text-center">
-                <h3 class="card-title">Daftar Peminjaman</h3>
-              </div>
-              <div class="card-header">
-
-                <a href="{{route('peminjaman.create')}}" class="btn btn-primary">Create</a>
+          <div class="col-12 mt-3">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">Edit Data</h3>
+                <a href="{{route('petugas.index')}}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Nama</th>
-                      <th>Mulai</th>
-                      <th>Selesai</th>
-                      <th>Ktm</th>
-                      <th>Genre</th>
-                      <th>Buku</th>
-                      <th>Petugas</th>
-                      <th>Status</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($peminjaman as $minjam)
-                    <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $minjam->nama_peminjam }}</td>
-                      <td>{{ $minjam->mulai }}</td>
-                      <td>{{ $minjam->selesai }}</td>
-                      <td>{{ $minjam->ktm }}</td>
-                      <td>{{ $minjam->genre->nama }}</td>
-                      <td>{{ $minjam->buku->title }}</td>
-                      <td>{{ $minjam->petugas->nama }}</td>
-                      <td>{{ $minjam->status_peminjam }}</td>
-                      <td class="d-flex">
-                        <a href="{{route('peminjaman.edit', $minjam->id)}}" class="btn btn-warning btn-sm">Edit</a>
-                        <form method="POST" action="{{route('peminjaman.delete', $minjam->id)}}">
-                          @csrf
-                          @method('delete')
-                          <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                        </form>
-                      </td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
+                <form action="{{route('petugas.store')}}" method="post">
+                  @csrf
+                  <div class="form-group row">
+                    <label for="nama" class="col-md-4">Nama</label>
+                    <input type="hidden" name="id" value="{{($petugas->id)}}">
+                    <input type="text" value="{{($petugas->nama)}}" name="nama" id="nama" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="gender" class="col-md-4">Gender</label>
+                    <select name="gender" class="form-control col-md-8" required>
+                      <option value="Laki-laki" {{ $petugas->gender == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
+                      <option value="Perempuan" {{ $petugas->gender == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="jam_mulai" class="col-md-4">Jam Mulai</label>
+                    <input type="time" value="{{ $petugas->jam_mulai }}" name="jam_mulai" id="jam_mulai" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="jam_selesai" class="col-md-4">Jam Selesai</label>
+                    <input type="time" value="{{ $petugas->jam_selesai }}" name="jam_selesai" id="jam_selesai" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="telepon" class="col-md-4">Telepon</label>
+                    <input type="number" name="telepon" class="form-control col-md-8" value="{{ $petugas->telepon }}" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="alamat" class="col-md-4">Alamat</label>
+                    <input type="text" name="alamat" class="form-control col-md-8" value="{{ $petugas->alamat }}" required>
+                  </div>
+                  <div class="d-flex justify-content">
+                    <input type="submit" value="Tambah" class="btn btn-primary">
+                  </div>
+                </form>
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -78,6 +71,7 @@
         <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
+          
     </section>
   </div>
 </div>

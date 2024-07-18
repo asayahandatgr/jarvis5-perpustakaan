@@ -29,7 +29,6 @@ class BukuController extends Controller
             'deskripsi' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
-            'cover_img' => 'required',
             'genre_id' => 'required'
         ]);
         if (isset($request->id)) {

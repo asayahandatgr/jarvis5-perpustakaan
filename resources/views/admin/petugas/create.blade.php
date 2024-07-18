@@ -18,56 +18,48 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-12">
-            <div class="card mt-3">
-              <div class="card-header text-center">
-                <h3 class="card-title">Daftar Peminjaman</h3>
-              </div>
-              <div class="card-header">
-
-                <a href="{{route('peminjaman.create')}}" class="btn btn-primary">Create</a>
+          <div class="col-12 mt-3">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">Tambah Data</h3>
+                <a href="{{ route('petugas.index') }}" class="btn btn-success btn-sm">Kembali</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
-                  <thead>
-                    <tr>
-                      <th>No</th>
-                      <th>Nama</th>
-                      <th>Mulai</th>
-                      <th>Selesai</th>
-                      <th>Ktm</th>
-                      <th>Genre</th>
-                      <th>Buku</th>
-                      <th>Petugas</th>
-                      <th>Status</th>
-                      <th>Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    @foreach ($peminjaman as $minjam)
-                    <tr>
-                      <td>{{ $loop->iteration }}</td>
-                      <td>{{ $minjam->nama_peminjam }}</td>
-                      <td>{{ $minjam->mulai }}</td>
-                      <td>{{ $minjam->selesai }}</td>
-                      <td>{{ $minjam->ktm }}</td>
-                      <td>{{ $minjam->genre->nama }}</td>
-                      <td>{{ $minjam->buku->title }}</td>
-                      <td>{{ $minjam->petugas->nama }}</td>
-                      <td>{{ $minjam->status_peminjam }}</td>
-                      <td class="d-flex">
-                        <a href="{{route('peminjaman.edit', $minjam->id)}}" class="btn btn-warning btn-sm">Edit</a>
-                        <form method="POST" action="{{route('peminjaman.delete', $minjam->id)}}">
-                          @csrf
-                          @method('delete')
-                          <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                        </form>
-                      </td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
+                <form action="{{ route('petugas.store') }}" method="post">
+                  @csrf
+                  <div class="form-group row">
+                    <label for="nama" class="col-md-4">Nama</label>
+                    <input type="text" name="nama" id="nama" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="gender" class="col-md-4">Jenis Kelamin</label>
+                    <select name="gender" id="gender" class="form-control col-md-8" required>
+                    <option value="" hidden>Pilih Jenis Kelamin</option>
+                      <option value="Laki-laki">Laki-laki</option>
+                      <option value="Perempuan">Perempuan</option>
+                    </select>
+                  </div>
+                  <div class="form-group row">
+                    <label for="jam_mulai" class="col-md-4">Jam Mulai</label>
+                    <input type="time" name="jam_mulai" id="jam_mulai" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="jam_selesai" class="col-md-4">Jam Selesai</label>
+                    <input type="time" name="jam_selesai" id="jam_selesai" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="telepon" class="col-md-4">Telepon</label>
+                    <input type="number" name="telepon" id="telepon" class="form-control col-md-8" required>
+                  </div>
+                  <div class="form-group row">
+                    <label for="alamat" class="col-md-4">Alamat</label>
+                    <input type="text" name="alamat" id="alamat" class="form-control col-md-8" required>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <input type="submit" value="Tambah" class="btn btn-primary">
+                  </div>
+                </form>
               </div>
               <!-- /.card-body -->
             </div>
@@ -81,6 +73,7 @@
     </section>
   </div>
 </div>
+
 @push('script')
 <script src="{{asset ('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset ('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>

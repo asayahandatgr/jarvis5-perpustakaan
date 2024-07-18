@@ -49,10 +49,6 @@
                         <input type="text" name="penerbit" id="penerbit" class="form-control col-md-8" required>
                     </div>
                     <div class="form-group row">
-                        <label for="cover_img" class="col-md-4">Cover IMG</label>
-                        <input type="text" name="cover_img" id="cover_img" class="form-control col-md-8" required>
-                    </div>
-                    <div class="form-group row">
                       <label for="genre_id" class="col-md-4">Genre</label>
                       <select name="genre_id" id="genre_id" class="form_control col-md-8">
                           <option value="" hidden>Pilih Genre</option>

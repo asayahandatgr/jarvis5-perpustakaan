@@ -25,7 +25,7 @@
                   </div>
                   <div class="card-header">
 
-                    <a href="" class="btn btn-primary">Create</a>
+                    <a href="{{route('petugas.create')}}" class="btn btn-primary">Create</a>
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
@@ -53,8 +53,8 @@
                               <td>{{ $tugas->telepon }}</td>
                               <td>{{ $tugas->alamat }}</td>
                               <td class="d-flex">
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                <form method="POST" action="">
+                                <a href="{{route('petugas.edit', $tugas->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                                <form method="POST" action="{{route('petugas.delete', $tugas->id)}}">
                                   @csrf
                                   @method('delete')
                                   <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
