@@ -25,7 +25,7 @@
                   </div>
                   <div class="card-header">
 
-                    <a href="" class="btn btn-primary">Create</a>
+                    <a href="{{route('buku.create')}}" class="btn btn-primary">Create</a>
                   </div>
                   <!-- /.card-header -->
                   <div class="card-body">
@@ -53,8 +53,8 @@
                               <td>{{ $buk->penerbit }}</td>
                               <td>{{ $buk->genre->nama }}</td>
                               <td class="d-flex">
-                                <a href="" class="btn btn-warning btn-sm">Edit</a>
-                                <form method="POST" action="">
+                                <a href="{{route('buku.edit', $buk->id)}}" class="btn btn-warning btn-sm">Edit</a>
+                                <form method="POST" action="{{route('buku.delete', $buk->id)}}">
                                   @csrf
                                   @method('delete')
                                   <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
@@ -95,22 +95,5 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset ('assets/dist/js/demo.js')}}"></script>
 <!-- Page specific script -->
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true, "lengthChange": false, "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
 @endpush
 @endsection

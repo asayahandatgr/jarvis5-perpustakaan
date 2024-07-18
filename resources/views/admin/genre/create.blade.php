@@ -12,61 +12,44 @@
   <link rel="stylesheet" href="{{asset('assets/dist/css/adminlte.min.css')}}">
 @endpush
 @section('content')
-    <div class="content-wrapper">
-      <div class="container">
-        <!-- Main content -->
-        <section class="content">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-12">
-                <div class="card mt-3">
-                  <div class="card-header text-center">
-                    <h3 class="card-title">Genre Buku</h3>
-                  </div>
-                  <div class="card-header">
-
-                    <a href="{{route('genre.create')}}" class="btn btn-primary">Create</a>
-                  </div>
-                  <!-- /.card-header -->
-                  <div class="card-body">
-                    <table id="example1" class="table table-bordered table-striped">
-                      <thead>
-                      <tr>
-                        <th>No</th>
-                        <th>Nama Genre</th>
-                        <th>Aksi</th>
-                      </tr>
-                      </thead>
-                      <tbody>
-                        @foreach ($genre as $gen)
-                            <tr>
-                              <td>{{ $loop->iteration }}</td>
-                              <td>{{ $gen->nama }}</td>
-                              <td class="d-flex">
-                                <a href="{{route('genre.edit', $gen->id)}}" class="btn btn-warning btn-sm">Edit</a>
-                                <form method="POST" action="{{route('genre.delete', $gen->id)}}">
-                                  @csrf
-                                  @method('delete')
-                                  <button onclick="if (!confirm ('Data akan di hapus?')) {return false}" type="submit" class="btn btn-danger btn-sm">Hapus</button>
-                                </form>
-                              </td>
-                            </tr>
-                        @endforeach
-                      </tbody>
-                    </table>
-                  </div>
-                  <!-- /.card-body -->
-                </div>
-                <!-- /.card -->
+<div class="content-wrapper">
+    <div class="container">
+      <!-- Main content -->
+      <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 mt-3">
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <h3 class="card-title">Tambah Data</h3>
+                <a href="{{route('genre.index')}}" class="btn btn-success btn-sm">Kembali</a>
               </div>
-              <!-- /.col -->
+              <!-- /.card-header -->
+              <div class="card-body">
+                <form action="{{route('genre.store')}}" method="post">
+                    @csrf
+                    <div class="form-group row">
+                        <label for="nama" class="col-md-4">Nama</label>
+                        <input type="text" name="nama" id="nama" class="form-control col-md-8" required>
+                    </div>
+                    <div class="d-flex justify-content">
+                        <input type="submit" value="Tambah" class="btn btn-primary">
+                    </div>
+                </form>
+                
+              </div>
+              <!-- /.card-body -->
             </div>
-            <!-- /.row -->
+            <!-- /.card -->
           </div>
-          <!-- /.container-fluid -->
-        </section>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
       </div>
+      <!-- /.container-fluid -->
+    </section>
     </div>
+  </div>
 @push('script')
     <script src="{{asset ('assets/plugins/datatables/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset ('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
