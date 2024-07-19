@@ -29,7 +29,8 @@ class BukuController extends Controller
             'deskripsi' => 'required',
             'penulis' => 'required',
             'penerbit' => 'required',
-            'genre_id' => 'required'
+            'genre_id' => 'required',
+            'harga' => 'required'
         ]);
         if (isset($request->id)) {
             $buku = Buku::find($request->id);

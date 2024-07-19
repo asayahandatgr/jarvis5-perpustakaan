@@ -27,7 +27,6 @@ class PembelianController extends Controller
             "nama_pembeli" => 'required',
             "telefon" => 'required',
             "buku_id" => 'required',
-            "harga" => 'required',
             "petugas_id" => 'required',
             "status_pembelian" => 'required',
         ]);

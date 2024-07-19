@@ -15,11 +15,11 @@ class PembelianSeeder extends Seeder
     {
         Pembelian::create([
             'tanggal' => '2024-07-05',
-            'nama_pembeli' => 'Alwi Smith',
+            'nama_pembeli' => 'Tegar Asayahanda',
             'telefon' => '08577456738',
             'buku_id' => 2, 
-            'harga' => 100000, 
-            'petugas_id' => 2,
+            'buku_id' => 2, 
+            'petugas_id' => 1,
             'status_pembelian' => 'Berhasil'
         ]);
     }

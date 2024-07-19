@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('penerbit');
             $table->unsignedBigInteger('genre_id');
             $table->foreign('genre_id')->references('id')->on('genre')->onDelete('cascade');
+            $table->string('harga');
             $table->timestamps();
         });
     }

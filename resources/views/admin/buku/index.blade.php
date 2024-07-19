@@ -39,6 +39,7 @@
                         <th>Penulis</th>
                         <th>Penerbit</th>
                         <th>Genre</th>
+                        <th>Harga</th>
                         <th>Aksi</th>
                       </tr>
                       </thead>
@@ -52,6 +53,7 @@
                               <td>{{ $buk->penulis }}</td>
                               <td>{{ $buk->penerbit }}</td>
                               <td>{{ $buk->genre->nama }}</td>
+                              <td>{{ $buk->harga }}</td>
                               <td class="d-flex">
                                 <a href="{{route('buku.edit', $buk->id)}}" class="btn btn-warning btn-sm">Edit</a>
                                 <form method="POST" action="{{route('buku.delete', $buk->id)}}">

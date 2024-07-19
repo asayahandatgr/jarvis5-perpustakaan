@@ -41,11 +41,11 @@
                     </select>
                   </div>
                   <div class="form-group row">
-                    <label for="jam_mulai" class="col-md-4">Jam Mulai</label>
+                    <label for="jam_mulai" class="col-md-4">Jam Masuk</label>
                     <input type="time" value="{{ $petugas->jam_mulai }}" name="jam_mulai" id="jam_mulai" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">
-                    <label for="jam_selesai" class="col-md-4">Jam Selesai</label>
+                    <label for="jam_selesai" class="col-md-4">Jam Pulang</label>
                     <input type="time" value="{{ $petugas->jam_selesai }}" name="jam_selesai" id="jam_selesai" class="form-control col-md-8" required>
                   </div>
                   <div class="form-group row">

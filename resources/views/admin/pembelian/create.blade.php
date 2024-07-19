@@ -50,8 +50,13 @@
                     </select>
                   </div>
                   <div class="form-group row">
-                    <label for="harga" class="col-md-4">Harga</label>
-                    <input type="number" name="harga" id="harga" class="form-control col-md-8" required>
+                    <label for="buku_id" class="col-md-4">Harga Buku</label>
+                    <select name="buku_id" id="buku_id" class="form-control col-md-8">
+                      <option value="" hidden>Pilih Buku</option>
+                      @foreach ($buku as $buk)
+                      <option value="{{ $buk->id}}">{{ $buk->harga }}</option>
+                      @endforeach
+                    </select>
                   </div>
                   <div class="form-group row">
                     <label for="petugas_id" class="col-md-4">Petugas</label>

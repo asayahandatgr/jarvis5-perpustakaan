@@ -76,16 +76,16 @@
               <li class="nav-item active">
                 <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about"> About</a>
+              </li>
               <li class="nav-item dropdown">
                 <a href="#services" class="dropbtn nav-link dropdown-toggle">Services</a>
                 <div class="dropdown-content">
-                  <a class="nav-link" href="#purchase">Purchase Books</a>
-                  <a class="nav-link" href="#borrow">Borrow Books</a>
-                  <a class="nav-link" href="#return">Return Books</a>
+                  <a class="nav-link" href="#purchase">Purchase</a>
+                  <a class="nav-link" href="#borrow">Borrow</a>
+                  <a class="nav-link" href="#return">Return</a>
                 </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about"> About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#buku">Books</a>
@@ -242,7 +242,7 @@
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>RP.</span> 100.000
+                  <span>RP.</span> 150.000
                 </h6>
                 <a href="">
                   Buy Now
@@ -261,11 +261,11 @@
             </div>
             <div class="detail-box">
               <h5>
-                Sang Pemimpin
+                Sang Pemimpi
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>RP.</span> 100.000
+                  <span>RP.</span> 120.000
                 </h6>
                 <a href="">
                   Buy Now
@@ -311,7 +311,7 @@
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>RP.</span> 100.000
+                  <span>RP.</span> 200.000
                 </h6>
                 <a href="">
                   Buy Now
@@ -334,7 +334,7 @@
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>RP.</span> 100.000
+                  <span>RP.</span> 75.000
                 </h6>
                 <a href="">
                   Buy Now
@@ -357,7 +357,7 @@
               </h5>
               <div class="price_box">
                 <h6 class="price_heading">
-                  <span>RP.</span> 100.000
+                  <span>RP.</span> 70.000
                 </h6>
                 <a href="">
                   Buy Now

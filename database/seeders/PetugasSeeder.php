@@ -14,7 +14,7 @@ class PetugasSeeder extends Seeder
     public function run(): void
     {
         Petugas::create([
-            'nama' => 'Asep Kurniawan',
+            'nama' => 'Asep',
             'gender' => 'Laki-laki',
             'jam_mulai' => '08:00:00',
             'jam_selesai' => '16:00:00',

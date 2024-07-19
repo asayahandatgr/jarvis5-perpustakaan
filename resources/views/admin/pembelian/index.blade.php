@@ -37,7 +37,7 @@
                       <th>Nama</th>
                       <th>No Telfon</th>
                       <th>Buku</th>
-                      <th>Harga</th>
+                      <th>Harga Buku</th>
                       <th>Petugas</th>
                       <th>Status Pembelian</th>
                       <th>Aksi</th>
@@ -51,7 +51,7 @@
                       <td>{{ $beli->nama_pembeli }}</td>
                       <td>{{ $beli->telefon }}</td>
                       <td>{{ $beli->buku->title }}</td>
-                      <td>{{ $beli->harga }}</td>
+                      <td>{{ $beli->buku->harga }}</td>
                       <td>{{ $beli->petugas->nama }}</td>
                       <td>{{ $beli->status_pembelian }}</td>
                       <td class="d-flex">

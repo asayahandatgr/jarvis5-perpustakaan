@@ -9,7 +9,7 @@ class Pembelian extends Model
 {
     use HasFactory;
     protected $table = 'pembelian';
-    protected $fillable = ['tanggal', 'nama_pembeli', 'telefon', 'buku_id', 'harga', 'petugas_id', 'status_pembelian'];
+    protected $fillable = ['tanggal', 'nama_pembeli', 'telefon', 'buku_id', 'petugas_id', 'status_pembelian'];
 
     public function buku(){
         return $this->belongsTo(Buku::class);

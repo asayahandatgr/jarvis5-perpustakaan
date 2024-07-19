@@ -82,6 +82,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item bg-danger">
+            <a href="" class="nav-link">
+              <i class="nav-icon fas fa-sign-out-alt rotate-180"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

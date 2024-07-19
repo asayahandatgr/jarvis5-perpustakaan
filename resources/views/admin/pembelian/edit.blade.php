@@ -51,9 +51,15 @@
                     </select>
                   </div>
                   <div class="form-group row">
-                    <label for="harga" class="col-md-4">Harga</label>
-                    <input type="number" value="{{ $pembelian->harga }}" name="harga" id="harga" class="form-control col-md-8" required>
+                    <label for="buku_id" class="col-md-4">Buku</label>
+                    <select name="buku_id" id="buku_id" class="form-control col-md-8">
+                      <option value="" hidden>Pilih Buku</option>
+                      @foreach ($buku as $buk)
+                      <option value="{{ $buk->id }}" {{ $pembelian->buku_id == $buk->id ? 'selected' : '' }}>{{ $buk->harga }}</option>
+                      @endforeach
+                    </select>
                   </div>
+                  
                   <div class="form-group row">
                     <label for="petugas_id" class="col-md-4">Petugas</label>
                     <select name="petugas_id" id="petugas_id" class="form-control col-md-8">

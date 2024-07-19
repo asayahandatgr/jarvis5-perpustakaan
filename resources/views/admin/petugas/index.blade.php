@@ -35,8 +35,8 @@
                         <th>No</th>
                         <th>Nama</th>
                         <th>Jenis Kelamin</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
+                        <th>Jam Masuk</th>
+                        <th>Jam Pulang</th>
                         <th>No Telfon</th>
                         <th>Alamat</th>
                         <th>Aksi</th>

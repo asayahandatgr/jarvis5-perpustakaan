@@ -58,6 +58,10 @@
                       @endforeach
                     </select>
                   </div>
+                  <div class="form-group row">
+                    <label for="harga" class="col-md-4">Harga Buku</label>
+                    <input type="text" value="{{ $buku->harga }}" name="harga" id="harga" class="form-control col-md-8" required>
+                  </div>
                   <div class="d-flex justify-content">
                     <input type="submit" value="Edit" class="btn btn-primary">
                   </div>

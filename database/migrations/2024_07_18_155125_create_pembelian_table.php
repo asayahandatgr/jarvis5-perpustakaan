@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nama_pembeli');
             $table->string('telefon');
             $table->unsignedBigInteger('buku_id');
-            $table->integer('harga');
             $table->unsignedBigInteger('petugas_id');
             $table->enum('status_pembelian', ['Berhasil', 'Gagal']);
             $table->foreign('buku_id')->references('id')->on('buku')->onDelete('cascade');

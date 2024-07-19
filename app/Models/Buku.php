@@ -10,7 +10,7 @@ class Buku extends Model
     use HasFactory;
 
     protected $table = "buku";
-    protected $fillable = ['title', 'isbn', 'deskripsi', 'penulis', 'penerbit', 'genre_id'];
+    protected $fillable = ['title', 'isbn', 'deskripsi', 'penulis', 'penerbit', 'genre_id', 'harga'];
     
     public function genre(){
         return $this->belongsTo(Genre::class);
