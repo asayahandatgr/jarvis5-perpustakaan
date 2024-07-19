@@ -1,12 +1,34 @@
 <?php
 
 use App\Http\Controllers\Admin AS ADMIN;
+use App\Http\Controllers\FormborController;
+use App\Http\Controllers\FormbuyController;
+use App\Http\Controllers\FormretController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
+
+
+Route::middleware('auth', 'user')->group(function () {
+    // Form Pembelian
+    Route::get('/formbuy', [FormbuyController::class, 'index'])->name('formbuy.index');
+    Route::post('/formbuy', [FormbuyController::class, 'store'])->name('formbuy.store');
+    Route::get('/formbuy/{id}', [FormbuyController::class, 'show'])->name('formbuy.show');
+
+    // Form Peminjaman
+    Route::get('/formborrow', [FormborController::class, 'index'])->name('formborrow.index');
+    Route::post('/formborrow', [FormborController::class, 'store'])->name('formborrow.store');
+    Route::get('/formborrow/{id}', [FormborController::class, 'show'])->name('formborrow.show');
+
+    // Form Peminjaman
+    Route::get('/formret', [FormretController::class, 'index'])->name('formret.index');
+    Route::post('/formret', [FormretController::class, 'store'])->name('formret.store');
+    Route::get('/formret/{id}', [FormretController::class, 'show'])->name('formret.show');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

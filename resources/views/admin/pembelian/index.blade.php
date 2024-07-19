@@ -37,7 +37,7 @@
                       <th>Nama</th>
                       <th>No Telfon</th>
                       <th>Buku</th>
-                      <th>Harga Buku</th>
+                      <th>Harga</th>
                       <th>Petugas</th>
                       <th>Status Pembelian</th>
                       <th>Aksi</th>

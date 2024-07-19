@@ -74,7 +74,7 @@
           <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('welcome' )}}">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about"> About</a>
@@ -82,9 +82,9 @@
               <li class="nav-item dropdown">
                 <a href="#services" class="dropbtn nav-link dropdown-toggle">Services</a>
                 <div class="dropdown-content">
-                  <a class="nav-link" href="#purchase">Purchase</a>
-                  <a class="nav-link" href="#borrow">Borrow</a>
-                  <a class="nav-link" href="#return">Return</a>
+                  <a class="nav-link" href="{{ url ('formbuy' )}}">Purchase</a>
+                  <a class="nav-link" href="{{ url ('formborrow' )}}">Borrow</a>
+                  <a class="nav-link" href="{{ url ('formret' )}}">Return</a>
                 </div>
               </li>
               <li class="nav-item">
@@ -253,10 +253,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 150.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -276,10 +276,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 120.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -299,10 +299,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 100.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -322,10 +322,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 200.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -345,10 +345,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 75.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -368,10 +368,10 @@
                 <h6 class="price_heading">
                   <span>RP.</span> 70.000
                 </h6>
-                <a href="">
+                <a href="{{ url ('formbuy' )}}">
                   Buy Now
                 </a>
-                <a href="">
+                <a href="{{ url ('formborrow' )}}">
                   Borrow now
                 </a>
               </div>
@@ -737,8 +737,8 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
-        Distribution <a href="https://themewagon.com">ThemeWagon</a>
+        <a href="https://html.design/">Tegar Asayahanda</a>
+        Distributed by <a href="https://themewagon.com">GarzHostinger</a>
       </p>
     </div>
   </footer>
