@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             PeminjamanSeeder::class,
             PengembalianSeeder::class,
             PembelianSeeder::class,
+            UserSeeder::class,
         ]);
     }
 }

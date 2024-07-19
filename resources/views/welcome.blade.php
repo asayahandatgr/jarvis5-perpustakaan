@@ -96,19 +96,28 @@
             </ul>
           </div>
           <div class="quote_btn-container">
-            <a href="">
-              <span>
+            @auth
+            <a class="nav-item nav-link" href="{{ route('dashboard' )}}"><span>
+                Profile
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i></a>
+            <a href="{{ route('logout') }}" class="nav-item nav-link" onclick="event.preventDefault();
+                     document.getElementById('logout-form').submit();"><span>
+                Logout
+              </span>
+              <i class="fa fa-undo" aria-hidden="true"></i></a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none">{{ csrf_field() }}</form>
+            @endauth
+            @guest
+            <a href="{{ route('login') }}" class="nav-link"><span>
                 Login
               </span>
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <span>
+              <i class="fa fa-user" aria-hidden="true"></i></a>
+            <a href="{{ route('register') }}" class="nav-link"><span>
                 Register
               </span>
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </a>
-
+              <i class="fa fa-user" aria-hidden="true"></i></a>
+            @endguest
           </div>
         </div>
       </nav>
@@ -130,10 +139,10 @@
                       a window into the diversity of global literature. From fascinating stories to deep thoughts, enjoy a journey through inspiring cultures and countries.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#contact" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      <a href="#about" class="btn2">
                         About Us
                       </a>
                     </div>
@@ -160,10 +169,10 @@
                       a place where you can find all kinds of stories you want. From heartwarming love stories to suspenseful horror tales, satisfying reading experience for all tastes.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#contact" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      <a href="#about" class="btn2">
                         About Us
                       </a>
                     </div>
@@ -190,10 +199,10 @@
                       our flexible library services. You can borrow or buy books from our extensive collection, according to your needs. Enjoy easy access and diverse choices for every reader.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
+                      <a href="#contact" class="btn1">
                         Contact Us
                       </a>
-                      <a href="" class="btn2">
+                      <a href="#about" class="btn2">
                         About Us
                       </a>
                     </div>
@@ -578,7 +587,7 @@
   <!-- end client section -->
 
   <!-- contact section -->
-  <section class="contact_section  long_section">
+  <section class="contact_section long_section" id="contact">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -654,7 +663,7 @@
                 QUICK LINKS
               </h4>
               <div class="info_links_menu">
-                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="" href="index.html">Dashboard <span class="sr-only">(current)</span></a>
                 <a class="" href="about.html"> About</a>
                 <a class="" href="furniture.html">Furniture</a>
                 <a class="" href="blog.html">Blog</a>
